@@ -1525,7 +1525,7 @@ function checkSafety() {
                     for (var k = 0; k < game.logs.length; k++) {
                         if (frog.position[0] + 0.05 > game.logs[k].position[0] && frog.position[0] + 0.05 < (game.logs[k].position[0] + game.logs[k].length)) {
                             if (frog.position[1] + 0.05 > game.logs[k].position[1] - 0.001 && frog.position[1] + 0.05 < (game.logs[k].position[1] + game.logs[k].width - 0.001) ) {
-                                frog.position[0] += 0.001;
+                                frog.position[0] += 0.002;
                                 return true;
                             }
                         }
