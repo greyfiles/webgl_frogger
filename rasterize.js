@@ -1429,11 +1429,11 @@ function updateCars() {
         if (game.cars[j].position[1] < 0.25) {
             // Slow lane
             if (game.cars[j].position[1] < 0.15) {
-                game.cars[j].position[0] += 0.001
+                game.cars[j].position[0] += 0.002
             }
             // Fast lane
             else {
-                game.cars[j].position[0] += 0.0015
+                game.cars[j].position[0] += 0.003
             }
 
             if (game.cars[j].position[0] > 1.4) {
@@ -1445,11 +1445,11 @@ function updateCars() {
         else {
             // Fast lane
             if (game.cars[j].position[1] < 0.35) {
-                game.cars[j].position[0] -= 0.0015
+                game.cars[j].position[0] -= 0.003
             }
             // Slow lane
             else {
-                game.cars[j].position[0] -= 0.001
+                game.cars[j].position[0] -= 0.002
             }
 
             if (game.cars[j].position[0] < 0) {
@@ -1473,7 +1473,7 @@ function updateLogs() {
 
     // Move and de-spawn logs at the side of board
     for (var k = 0; k < game.logs.length; k++) {
-        game.logs[k].position[0] += 0.001
+        game.logs[k].position[0] += 0.002
 
         if (game.logs[k].position[0] > 1.4) {
             game.logs.splice(k, 1);
